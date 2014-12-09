@@ -4,8 +4,9 @@
 /* @var $generator yii\gii\generators\form\Generator */
 
 $i = '';
-$columnRow = '<div class="gii-migration-column-row">'
-	.$form->field($generator, 'columns['.$i.']', ['inputOptions' => ['class' => 'form-control gii-migration-columns-input', 'id' => '', ]])
+$columnRow = '<div class="gii-migration-column-row well well-sm clearfix">'
+	.'<div class="col-sm-6">'.$form->field($generator, 'columns['.$i.']', ['inputOptions' => ['class' => 'form-control gii-migration-columns-input', 'id' => '', ]]).'</div>'
+	.'<div class="col-sm-6">'.$form->field($generator, 'types['.$i.']', ['inputOptions' => ['class' => 'form-control', 'id' => '', ]]).'</div>'
 	.'</div>';
 
 $jsColumnRow = json_encode($columnRow);
@@ -23,22 +24,26 @@ JS;
 $this->registerJs($script);
 
 echo $form->field($generator, 'tableName');
-echo $form->field($generator, 'baseClass');
+echo $form->field($generator, 'includeDefaultColumns')->checkbox();
 ?>
 <div class="hidden">
 	<?=$form->field($generator, 'migrationClassName')->hiddenInput();?>
 </div>
-<div id="gii-migration-columns">
+<div id="gii-migration-columns" class='clearfix'>
 <?php
 if(count($generator->columns) > 0)
 {
 	foreach($generator->columns as $i => $column)
 	{
-		echo $columnRow;
+		echo '<div class="gii-migration-column-row well well-sm clearfix">'
+			.'<div class="col-sm-6">'.$form->field($generator, 'columns['.$i.']', ['inputOptions' => ['class' => 'form-control gii-migration-columns-input', 'id' => '', ]]).'</div>'
+			.'<div class="col-sm-6">'.$form->field($generator, 'types['.$i.']', ['inputOptions' => ['class' => 'form-control', 'id' => '', ]]).'</div>'
+			.'</div>';
 	}
 }
 else{
 	echo $columnRow;
 }
 ?>
+
 </div>
