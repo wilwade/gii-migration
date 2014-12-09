@@ -14,5 +14,8 @@
 		}
 	},
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+    	"yiisoft/yii2": "*",
+    	"yiisoft/yii2-gii": "*"
+    }
 }
