@@ -1,18 +1,23 @@
 {
     "name": "wilwade/gii-migration",
     "description": "Yii2 Gii Migration Generator",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "gii", "migration"],
     "license": "MIT",
     "authors": [
-        {
-            "name": "Wil Wade",
-            "email": "wil@wilwade.com"
-        }
+	{
+	    "name": "Wil Wade",
+	    "email": "wil@wilwade.com"
+	}
     ],
-	"autoload": {
-		"psr-4": {
-			"wilwade\\giiMigration\\": ""
-		}
-	},
+    "support": {
+    	"source": "https://github.com/wilwade/gii-migration"
+    }
+    "autoload": {
+	"psr-4": {
+		"wilwade\\giiMigration\\": ""
+	}
+    },
     "minimum-stability": "stable",
     "require": {
     	"yiisoft/yii2": "*",
