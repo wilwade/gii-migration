@@ -12,7 +12,7 @@
     ],
     "support": {
     	"source": "https://github.com/wilwade/gii-migration"
-    }
+    },
     "autoload": {
 	"psr-4": {
 		"wilwade\\giiMigration\\": ""
