@@ -7,8 +7,6 @@ A Yii2 Gii Code Generator to create basic new table migrations easily.
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-NOTICE: @todo. I have not yet submitted to packagelist so this will not work.
-
 ```
 "wilwade/gii-migration": "dev-master"
 ```
@@ -18,8 +16,7 @@ NOTICE: @todo. I have not yet submitted to packagelist so this will not work.
 ```php
 //if your gii modules configuration looks like below:
     $config['modules']['gii'] = 'yii\gii\Module';
-
-//remove this line
+// Replace this line
 ```
 
 ```php
