@@ -6,7 +6,9 @@
 /* @var $className string the new migration class name */
 
 $columns = array_combine($generator->columns, $generator->types);
-$columns = array_merge($generator->defaultColumns, $columns);
+if ($generator->includeDefaultColumns === 1) {
+	$columns = array_merge($generator->defaultColumns, $columns);
+}
 $foreignKeys = [];
 foreach($generator->columns as $key => $column):
 	if(substr($column, -3) === '_id'):
