@@ -88,7 +88,7 @@ class Generator extends \yii\gii\Generator
     {
         return array_merge(parent::hints(), [
 			'tableName' => 'The Name of the new Table (will create migration m#####_####_create_TABLE_NAME)',
-			'includeDefaultColumns' => 'Default colums are defined in the configuration for the gii module',
+			'includeDefaultColumns' => 'Default columns are defined in the configuration for the gii module',
             'baseClass' => 'This is the base class of the new ActiveRecord class. It should be a fully qualified namespaced class name.',
 			'columns' => 'The names of the columns',
 			'types' => 'Database Types like Yii versions of string, int, or database types such as varchar. See Yii values: <a href="http://www.yiiframework.com/doc-2.0/yii-db-schema.html">http://www.yiiframework.com/doc-2.0/yii-db-schema.html</a>',
