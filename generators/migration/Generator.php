@@ -30,7 +30,7 @@ class Generator extends \yii\gii\Generator
 	 */
 	public $defaultColumns = [];
 	
-	public $includeDefaultColumns = 1;
+	public $includeDefaultColumns = '1';
 	public $tableName;
 	public $columns;
 	public $types;

@@ -6,7 +6,7 @@
 /* @var $className string the new migration class name */
 
 $columns = array_combine($generator->columns, $generator->types);
-if ($generator->includeDefaultColumns === 1) {
+if ($generator->includeDefaultColumns === '1') {
 	$columns = array_merge($generator->defaultColumns, $columns);
 }
 $foreignKeys = [];
