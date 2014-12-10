@@ -27,7 +27,7 @@ class <?= $className ?> extends Migration
 {
     public function up()
     {
-		$this->createTable(<?=$generator->tableName;?>, [
+		$this->createTable('<?=$generator->tableName;?>', [
 <?php foreach($columns as $column => $type):?>
 			'<?=$column;?>' => '<?=$type;?>',
 <?php endforeach;?>
